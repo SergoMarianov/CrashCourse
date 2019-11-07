@@ -1,14 +1,22 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-Vagrant.configure(2) do |config|
+Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
+  
 
+	config.vm.define "firstVM" do |firstVM|
+	  config.vm.hostname = "firstVM"
 
-config.vm.define "firstVM" do |firstVM|
-end
+ 	  config.vm.define "firstVM"
+	  config.vm.network "forwarded_port", guest: 80, host: 1234
+	end
 
-config.vm.define "secondVM" do |secondVM|
-end
+	config.vm.define "secondVM" do |secondVM|
+	  config.vm.hostname = "secondVM"
+	  config.vm.network "public_network", bridge: "eth1"
+	  config.vm.define "secondVM"
+
+	end
 end
 
 
