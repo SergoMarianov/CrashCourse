@@ -5,5 +5,5 @@ then
        	echo "File already exist"
 else
 	echo "Serhii Marianov" > ~/my_name.txt
-	echo "File created"
+	echo "File created successfully"
 fi

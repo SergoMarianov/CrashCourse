@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "insert two numbers (tap ENTER after each)"
+echo "Insert two numbers (tap ENTER after each)"
 read a
 read c
 sum=$(($a + $c))
