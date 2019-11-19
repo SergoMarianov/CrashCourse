@@ -14,3 +14,9 @@ task2.ps1:  You should create a PowerShell script which will initially install d
 
                     --autoupgrade
                     --uninstall
+
+                 Functional:
+
+                    --autoupgrade argument - script should create daily schedule for 
+                                             running sh > choco upgrade dotnetcore-sdk command.
+                    --uninstall argument - uninstall dotnetcore-sdk , chocolately, and scheduler (if exist)
