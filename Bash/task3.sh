@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo "insert two numbers (tap ENTER after each)"
-read a
-read c
-sum=$(($a + $c))
+echo "Insert two numbers (tap ENTER after each)"
+read -r a
+read -r c
+sum=$((a + c))
 echo "sum = $sum"
 if [ "$a" -lt "$c" ]
 then
